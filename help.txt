@@ -1,0 +1,22 @@
+Three stand-alone functions for propagating uncertainty through an arbitrary function. Two of the functions use the standard sum of squares formula and the third uses Monte Carlo simulation.
+
+These functions are distinct from others in that each function can handle correlated uncertainties as well as uncorrelated uncertainties. The Monte Carlo function also supports many different types of distributions, truncated distributions, custom data inputs, and various different methods of generating samples.
+
+The functions propUncertSym() and propUncertCD() use the standard sum of squares method of uncertainty propagation: https://en.wikipedia.org/wiki/Propagation_of_uncertainty#Non-linear_combinations.
+
+• propUncertSym() calculates derivatives using the symbolic toolbox
+• propUncertCD() calculates derivatives using a central difference approximation. (Useful if differentiation of the function is intractable or symbolic differentiation is not desired/supported)
+• Both functions can handle correlated uncertainties.
+
+The propUncertMC() function uses Monte Carlo simulation to propagate uncertainty.
+
+• Supports most/all of the distribution types in MATLAB's statistics and machine learning toolbox, including truncated distributions.
+• Can generate correlated samples from any combination of distribution types via a gaussian copula approach with iterative optimization of the correlation parameters.
+• Supports custom data inputs and various methods for generating Monte Carlo samples such as bootstrapping and distribution fitting.
+• Allows for visualization of the uncertainty distributions using histogram plots.
+
+Note: The sum of squares uncertainty propagation formula is derived from a first-order Taylor expansion of the function which uncertainty is to be propagated through. As a consequence, the formula will only be accurate to the extent that the function is linear in the region of interest. The accuracy of the sum of squares formula can also be degraded if the distribution resulting from the function is not approximately normal. The Monte Carlo method of error propagation does not suffer from these accuracy limitations. With that said, the sum of squares formula tends to give adequate accuracy with most physically relevant equations provided that the uncertainties are normal and have relatively small magnitude.
+
+HOW TO USE: Explanations of syntax and simple examples of each function's usage are included in the comments of each function file. More detailed examples can be found in the included file 'uncert_prop_examples.m'.
+
+When using propUncertMC() it is recommended to set the parameter for the number of samples 'N' as high as possible while still maintaining an acceptable runtime.
