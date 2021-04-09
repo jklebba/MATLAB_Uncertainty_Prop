@@ -8,7 +8,7 @@ The functions are unique in that each one can handle correlated as well as uncor
 
 #### propUncertSym()
 * Uses the [standard formula](https://en.wikipedia.org/wiki/Propagation_of_uncertainty#Non-linear_combinations) for uncertainity propagation.
-* Calculates the derivatives in the formula using the MATLAB/Ocatve's symbolic package.
+* Calculates the derivatives in the formula using the MATLAB/Octave's symbolic package.
 * Can handle correlated or uncorrelated uncertainties.
 
 #### propUncertCD()
