@@ -209,11 +209,11 @@ while(distIdx < size(dists,1))
         case {'Uniform','uniform'}
             %Enables uniform samples to be generated without the need for 
             %the Statistics and Machine Learning Toolbox.
-            %Syntax is: {'Uniform',upperbound,lowerbound)
+            %Syntax is: {'Uniform',upperbound,lowerbound}
             sampledVars{sampIdx} = dists{distIdx}{2} + (dists{distIdx}{3}-dists{distIdx}{2})*rand(N,1);
         otherwise
             %Sample a distribution specified by the distribution params
-            %Syntax is: {'DistributionName',param_1, ... ,param_n)
+            %Syntax is: {'DistributionName',param_1, ... ,param_n}
             
             %You can also specify a truncated distribution like so:
             % {'DistributionType',param_1, ... ,param_n,'trunc',lowerCutOff,upperCutOff}
