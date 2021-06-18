@@ -19,7 +19,7 @@ function [uncert, value]= propUncertCD(func,vals,uncerts,corrMat)
 %   to the order of the variables in the '@(x,y,z)' part of the function handle.
 
 % OUTPUTS
-%   uncert      uncertainity in the esimate of the function output
+%   uncert      uncertainity in the estimate of the function output
 %   value       estimate of the function output
 
 % %EXAMPLE
