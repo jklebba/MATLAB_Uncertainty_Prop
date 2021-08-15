@@ -4,7 +4,7 @@ This repo contains three stand-alone functions for uncertainty propagation in MA
 Two of the functions use the regular uncertainity propagation [formula](https://en.wikipedia.org/wiki/Propagation_of_uncertainty#Non-linear_combinations) while the
 third uses Monte Carlo simulation. Monte Carlo is more accurate when the function which error is propagated through is nonlinear or when the resulting uncertainity distribution is nonnormal.
 
-These functions have extended capabilities compared to other uncertainity propagation functions that are available online. This is because each function can handle correlated as well as uncorrelated uncertainties. The Monte Carlo function **propUncertMC()** also supports many different types of distributions, truncated distributions, custom data inputs, and various additional methods for generating Monte Carlo samples.
+These functions have extended capability compared to other uncertainity propagation functions that are available online. This is because each function can handle correlated as well as uncorrelated uncertainties. The Monte Carlo function **propUncertMC()** also supports many different types of distributions, truncated distributions, custom data inputs, and various additional methods for generating Monte Carlo samples.
 
 #### propUncertSym()
 * Uses the [standard formula](https://en.wikipedia.org/wiki/Propagation_of_uncertainty#Non-linear_combinations) for uncertainity propagation.
